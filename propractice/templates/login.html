@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Social Bot</title>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="{{ url_for('static',filename='login.css')}}" />
+  </head>
+  <body>
+    <header class="nav">
+
+      <div class="navbar">
+          <div class="navimage">
+              <img src="../static/Images/3.jpg"/>
+          </div>
+          <div class="maincontent">
+              <a href="/"><h3>SOCIAL BOT</h3></a> 
+          </div>
+  </header>
+    <form action = "/loginaction" method = "POST" class="body">
+      <div class="login_form_container">
+        <div class="login_form">
+          <h2>Admin Login</h2>
+          <div class="input_group">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Username" class="input_text" name="username" />
+          </div>
+          <div class="input_group">
+            <i class="fa fa-unlock-alt"></i>
+            <input type="password" placeholder="Password" class="input_text" name="password"/>
+          </div>
+          <div>
+            <input type="reset" value="RESET" class="ab"/>
+          </div>
+          <div class="button_group" id="login_button">
+            <input class="a" type="submit" value="ADMIN LOGIN" />
+          </div>          
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

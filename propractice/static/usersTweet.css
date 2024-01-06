@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0px;
+    background-image: url("../static/Images/wallpaperflare.com_wallpaper\ \(2\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div2 {
+    background-color: transparent;
+    height: 60px;
+    /* margin-top: 10px; */
+}
+.div2 h2{
+    margin-top: 0px;
+    font-size: 30px;
+    text-align: center;
+    color:black;
+    padding: 10px;
+}
+.div3 h4{
+    color: rgb(3, 71, 98);
+    margin: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.div3{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    margin-left: 700px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.div3 textarea{
+    border-radius: 10px;
+    font-size: 15px;
+    border-color: black;
+    height: 50px;
+    margin-left: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.navimage img,.compname,.navimage h4,.maincontent h3,.logout{
+    display: inline-block;
+}
+.navbar{
+    display: block;
+    background-color: transparent;
+    color: black;
+    height: 4em;
+    /* margin: 15px 10px; */
+    border-radius: 5px;
+    gap: 10px;
+
+}
+.navimage{
+    display: inline-block;
+    float:left;
+    margin: 0px 3px;
+}
+.navimage img{
+    border-radius: 50%;
+}
+.maincontent{
+    float: right;
+    display: inline-block;
+    margin: 0px ;
+    /* margin-top: 3px;     */
+}
+.maincontent h3{
+    color: black;
+    padding: 0px 5px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    height:20px ;
+    padding: 10px;
+    margin-top: 15px;
+
+}
+.maincontent h3:hover{
+    /* color: red; */
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    height:20px ;
+    border-radius: 5px;
+}
+.navimage img{
+    height: 30px;
+    padding: 15px 3px;
+}
+.compname h3{
+    color: black;
+    font-family: sans-serif;
+    padding: 0px 5px;
+    /* letter-spacing: 0.1em; */
+    cursor: pointer;
+    margin-top:22px;
+}
+.compname h3:hover{
+    color: #007acc;
+}
+.a{
+    text-decoration: none;
+    text-decoration: none;
+}

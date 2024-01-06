@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Social Bot</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='Analysis.css')}}" />
+</head>
+<body>
+  <div >
+    <div class="navbar">
+        <div class="navimage">
+            <img src="../static/Images/3.jpg"/>
+        </div>
+        <div class="compname">
+            <a href="/" class="a"><h3>SOCIAL BOT</h3> </a> 
+        </div>
+        <div class="maincontent">
+            <a href="/"><h3>Home </h3></a>&emsp;
+            <a href="/userdetail"><h3>Register Details </h3></a>&emsp;
+            <a href="/admin"><h3>Full Details </h3></a>&emsp;
+            <a href="/analysis"><h3>Analysis </h3></a>&emsp;
+        </div>
+    </div>
+    <img src="../static/Images/545486.jpg" class="img"/>
+  </div>
+  <h2 class="h2">Detection of Malicious Social Bots Using machine Learning</h2>
+  <div>
+    <h2 class="h2">Analysis</h2>
+    <script src="../static/js/Chart.min.js"></script>
+    <center><canvas id="chart" width="700" height="400" ></canvas></center>
+<script>
+ 
+   // bar chart data
+   var chartData = {
+   labels : [{% for item in labels %}
+                  "{{item}}",
+              {% endfor %}],
+   datasets : [
+      {
+            label: '{{legend}}',
+            fillColor: "rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            bezierCurve : false,
+            data : [{% for value in values %}
+                      {{value}},
+                    {% endfor %}]
+      }]
+   }
+ 
+    Chart.defaults.global.animationSteps = 50;
+    Chart.defaults.global.tooltipYPadding = 16;
+    Chart.defaults.global.tooltipCornerRadius = 0;
+    Chart.defaults.global.tooltipTitleFontStyle = "normal";
+    Chart.defaults.global.tooltipFillColor = "rgba(0,0,0,0.8)";
+    Chart.defaults.global.animationEasing = "easeOutBounce";
+    Chart.defaults.global.responsive = false;
+    Chart.defaults.global.scaleLineColor = "black";
+    Chart.defaults.global.scaleFontSize = 16;
+ 
+   // get bar chart canvas
+   var ctx = document.getElementById("chart").getContext("2d");
+ 
+   steps = 10
+   max = 100
+   
+   var BarChartDemo = new Chart(ctx).Bar(chartData, {
+        scaleOverride: true,
+        scaleSteps: steps,
+        scaleStepWidth: Math.ceil(max / steps),
+        scaleStartValue: 0,
+        scaleShowVerticalLines: true,
+        scaleShowGridLines : true,
+        barShowStroke : true,
+        scaleShowLabels: true,
+        bezierCurve: false,
+ 
+   });
+   
+</script>
+</body>
+</html>

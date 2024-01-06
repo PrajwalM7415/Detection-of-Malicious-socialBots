@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Social Bot</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='preview.css')}}" />
+    </head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        function hideLoader() {  
+        // $('#loading').show(0).delay(1000).hide(0,function(){
+            alert("Training finished!");
+            window.location = "{{url_for('register')}}";
+        };    
+        // }
+    </script>
+
+    <body>
+        <header class="nav">
+
+            <div class="navbar">
+                <div class="navimage">
+                    <img src="../static/Images/3.jpg"/>
+                </div>
+                <div class="maincontent">
+                    <a href="/"><h3>SOCIAL BOT</h3></a>
+                </div>
+
+            </div>
+        </header>
+        <div class="Divimage">
+            <img src="../static/Images/trainning-concept-training-development-as-39350791.webp" class="image"/>
+            <!-- <input type="button" onclick="scroll()" value="Scroll Down" class="ss"/> -->
+        </div>
+        <div class="container">
+            {{ df_view.to_html(classes="table bordered",na_rep="-") | safe}}
+        </div>
+        <input type="button" onclick="hideLoader()" value="CLICK TO TRAIN" class="ss">
+    </body>
+</html>
+
+
+

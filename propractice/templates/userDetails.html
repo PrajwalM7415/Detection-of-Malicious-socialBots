@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Social Bot</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='userDetails.css')}}" />
+    </head>
+    <body>
+        <div >
+            <div class="navbar">
+                <div class="navimage">
+                    <img src="../static/Images/3.jpg"/>
+                </div>
+                <div class="compname">
+                    <a href="/" class="a"><h3>SOCIAL BOT</h3> </a> 
+                </div>
+                <div class="maincontent">
+                    <a href="/"><h3>Home </h3></a>&emsp;
+                    <a href="/userdetail"><h3>Register Details </h3></a>&emsp;
+                    <a href="/admin"><h3>Full Details </h3></a>&emsp;
+                    <a href="/analysis"><h3>Analysis </h3></a>&emsp;
+                </div>
+            </div>
+            <img src="../static/Images/545486.jpg" class="img"/>
+        </div>
+        <div class="divBd">
+            <center><h2>USER DETAILS</h2></center>
+            <center>
+                <table cellspacing="5px" border="1px" cellpadding="10px">
+                    <tr>          
+                        <th>user_id</th>
+                        <th>user_name</th>
+                        <th>Email</th>
+                        <th>password</th>
+                    </tr>
+                    {% for userdetail in useradmin %}            
+                    <tr>
+                        <td> <p style="color:blue">{{userdetail[0]}} </p></td>
+                        <td> <p style="color:blue">{{userdetail[1]}} </p></td>
+                        <td> <p style="color:blue">{{userdetail[2]}} </p></td>
+                        <td> <p style="color:blue">{{userdetail[3]}} </p></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </center>
+        </div>
+    </body>
+</html>

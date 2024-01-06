@@ -1,0 +1,95 @@
+body{
+    margin: 0px;
+}
+
+.container{
+    background-color: grey;
+    width: 3500px;
+    /* margin-top: 70px; */
+}
+.container thead tr{
+    font-size: 20px;
+    color: white;
+    background-color: rgb(43, 41, 41);
+    position: sticky;
+    top: 70px;
+    border: 2px solid white;
+    text-align: center;
+    text-align: center;
+    justify-content: center;
+}
+.maincontent a{
+    text-decoration: none;
+}
+
+.navbar{
+    display: block;
+     background-color: black; 
+    /* background-image: url('https://c4.wallpaperflare.com/wallpaper/846/863/628/abstract-cube-3d-wallpaper-preview.jpg'); */
+    position: fixed;
+    color: white;
+    width: 1550px;
+    /* height: 70px; */
+    margin-bottom: 100px;
+    top: 0;
+    border-radius: 0px;
+    overflow: hidden;
+}
+.navimage{
+    display: inline-block;
+    float:left;
+    margin: 0px 3px;
+}
+.navimage img{
+    border-radius: 50%;
+}
+.maincontent{
+    /* float: right; */
+    /* display: inline-block; */
+    margin: 0px 20px;
+    margin-top: 3px;
+    text-decoration: none;
+
+}
+.maincontent h3{
+    color: white;
+    padding: 0px;
+    letter-spacing: 0.1em;
+    /* cursor: pointer; */
+    font-size: 20px;
+    text-decoration: none;
+
+}
+.maincontent h3:hover{
+    color: gray;
+    cursor: pointer;
+
+}
+.navimage img{
+    height: 30px;
+    padding: 15px 3px;
+}
+.image{
+    height: 500px;
+    width: 100%;
+    /* top: 70px; */
+    margin-bottom:0px;
+    /* align-items: flex-end; */
+}
+.ss{
+    /* float: right; */
+    top: 0px;
+    margin-left: 45%;
+    padding: 20px;
+    border-radius: 20px;
+    color: lightgreen;
+    font-size: large;
+    border-color: green;
+    cursor: pointer;
+}
+.ss:hover{
+    cursor: pointer;
+    border-color: transparent;
+    background-color: lightgreen;
+    color: white;
+}

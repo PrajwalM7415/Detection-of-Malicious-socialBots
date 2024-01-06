@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Social Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='adminLogin.css')}}" />
+  </head>
+  <body>
+    <div class="compname">
+      <a href="/" class="a"><h3>SOCIAL BOT</h3> </a> 
+  </div>
+    <section class="container">
+    <!-- <h1 style="color: white;">{{msg}}</h1> --><h4><center>{{msg}}</center></h4>
+        <div class="login-container">
+            <div class="circle circle-one"></div>
+            <div class="form-container">
+                <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" />
+                <h1 class="opacity">LOGIN</h1>
+                <div style="color: white;">{{msg}}</div>
+                <form action = "/userloginaction" method = "POST">
+                    <input type="text" placeholder="EMAIL" name="email" required/>
+                    <input type="password" placeholder="PASSWORD" name="password" required/>
+                    <input type="submit"  class="but" value="LOGIN"/>
+                    <a href="/signup" value="signup" class="a">SIGNUP</a>
+                </form>
+            </div>
+            <div class="circle circle-two"></div>
+        </div>
+        <div class="theme-btn-container"></div>
+    </section>
+</body>
+</html>

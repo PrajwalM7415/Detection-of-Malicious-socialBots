@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Social Bot</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='prediction.css')}}" />
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="navimage">
+                    <img src="../static/Images/3.jpg"/>
+                </div>
+                <div class="compname">
+                    <a href="/" class="a"><h3>SOCIAL BOT</h3> </a> 
+                </div>
+                <div class="maincontent">
+                    <a href="/users"><h3>Tweets </h3></a>&emsp;
+                    <a href="/userlogin"><h3>Logout </h3></a>&emsp;
+                </div>
+            </div>
+        </header>
+        <form action="{{ url_for('chart')}}"method=['GET']>
+            <div class="box">
+                <textarea type = "text" name="news" placeholder="post your tweet" class="textarea"></textarea><br/>
+                <button type="submit" class="but">Predict</button>
+            </div>
+        </form>
+    </body>
+</html>
